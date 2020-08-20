@@ -4,25 +4,37 @@ cat("Completed package load\n")
 library(jsonlite)
 AZURE_CREDENTIALS=Sys.getenv("AZURE_CREDENTIALS")
 if(nchar(AZURE_CREDENTIALS)==0) stop("No AZURE_CREDENTIALS")
+cat("Found Credentials\n")
 
 creds <- fromJSON(AZURE_CREDENTIALS)
 if(length(creds)==0) stop("Malformed AZURE_CREDENTIALS")
+cat("Read Credentials\n")
 
 TENANT_ID <- creds$tenantId
 SP_ID <- creds$clientId
 SP_SECRET <- creds$clientSecret
 SUBSCRIPTION_ID <- creds$subscriptionId
+cat(TENANT_ID,"\n",
+   SP_ID,"\n",
+   SP_SECRET,"\n",
+   SUBSCRIPTION_ID,"\n",)
 
 workspace.json <- fromJSON("../.cloud/.azure/workspace.json")
+cat("Read Workspace\n")
+
 WSRESOURCEGROUP <- workspace.json$resource_group
 WSNAME <- workspace.json$name
+cat(WSRESOURCEGROUP,"\n",
+   WSNAME,"\n")
 
 compute.json <- fromJSON("../.cloud/.azure/compute.json")
 CLUSTER_NAME <- compute.json$name
+cat(CLUSTER_NAME,"\n")
 
 svc_pr <- service_principal_authentication(tenant_id=TENANT_ID,
                                            service_principal_id=SP_ID,
                                            service_principal_password=SP_SECRET)
+cat("Connected Service Principal\n")
 
 ws <- get_workspace(WSNAME,
                     SUBSCRIPTION_ID,
