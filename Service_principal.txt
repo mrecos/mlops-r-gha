@@ -1,0 +1,35 @@
+az ad sp create-for-rbac --name ghactions \
+                         --role contributor \
+                         --scopes /subscriptions/db3792d5-fa8a-40f8-a058-f4ebd9181948/resourceGroups/ghMLactions \
+                         --sdk-auth
+
+Changing "ghactions" to a valid URI of "http://ghactions", which is the required format used for service principal names
+Creating a role assignment under the scope of "/subscriptions/db3792d5-fa8a-40f8-a058-f4ebd9181948/resourceGroups/ghMLactions"
+  Retrying role assignment creation: 1/36
+  Retrying role assignment creation: 2/36
+############# AZURE_CREDENTIALS # GH Secret ###########
+{
+  "clientId": "0ec1608f-6050-4b35-ac6b-18cea445ea82",
+  "clientSecret": "ons8cedi9PMMPrQlNKaLVK6I-0s05d0ea.",
+  "subscriptionId": "db3792d5-fa8a-40f8-a058-f4ebd9181948",
+  "tenantId": "16ed5ab4-2b59-4e40-806d-8a30bdc9cf26",
+  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+  "resourceManagerEndpointUrl": "https://management.azure.com/",
+  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+  "galleryEndpointUrl": "https://gallery.azure.com/",
+  "managementEndpointUrl": "https://management.core.windows.net/"
+}
+
+################ ML Workspace name ######
+ghActionMlSpace
+
+################ SHINYKEY # GH Secret ########
+{
+
+}
+
+################# SHINYHOST # GH Secret ########
+{
+
+}

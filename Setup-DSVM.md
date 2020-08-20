@@ -41,6 +41,7 @@ git clone https://github.com/revodavid/mlops-r-gha
 ```
 
 12. Launch R and install the `azuremlsdk` package from GitHub as described in the [`azuremlsdk` repository](https://github.com/Azure/azureml-sdk-for-r). Don't forget the `azuremlsdk::install_azureml()` step.
+    - see this [SO post](https://stackoverflow.com/questions/32540919/library-is-not-writable/36696488#comment95292973_36696488) about changing permissions to install R pacakges in the default directory. 
 
 13. Trigger the "Train and Deploy Model" GitHub Action in your repository. You can do this by touching a file in the `model` folder, or by browsing the Actions tab and using the "Re-Run Jobs" feature.
 
