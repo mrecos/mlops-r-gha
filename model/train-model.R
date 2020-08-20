@@ -2,7 +2,9 @@ library(azuremlsdk)
 cat("Completed package load\n")
 
 library(jsonlite)
+cat("Loaded jsonlite\n")
 AZURE_CREDENTIALS=Sys.getenv("AZURE_CREDENTIALS")
+cat("Read creds from ENV\n")
 if(nchar(AZURE_CREDENTIALS)==0) stop("No AZURE_CREDENTIALS")
 cat("Found Credentials\n")
 
