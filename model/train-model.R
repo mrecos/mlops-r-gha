@@ -57,7 +57,10 @@ est <- estimator(source_directory=".",
                  entry_script = "accident-glm.R",
                  script_params = list("--data_folder" = ds$path(target_path)),
                  compute_target = compute_target)
+cat("Created Estimator\n")
+
 run <- submit_experiment(exp, est)
+cat("Submitted Run\n")
 
 wait_for_run_completion(run, show_output = TRUE)
 
