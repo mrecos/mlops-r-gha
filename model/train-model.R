@@ -19,7 +19,7 @@ SUBSCRIPTION_ID <- creds$subscriptionId
 cat(TENANT_ID,"\n",
    SP_ID,"\n",
    SP_SECRET,"\n",
-   SUBSCRIPTION_ID,"\n",)
+   SUBSCRIPTION_ID,"\n")
 
 workspace.json <- fromJSON("../.cloud/.azure/workspace.json")
 cat("Read Workspace\n")
