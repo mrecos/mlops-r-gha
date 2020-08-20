@@ -35,7 +35,7 @@ touch .hushlogin
 
 1. Replace /etc/shiny-server/shiny-server.conf with the file in this repository. This configures Shiny to deliver a single application from the "mlops-r-gha/accident-app" folder, and we can update files here via the configured SSH.
 
-1. Clone the mlops-r-gha repository on shinyserver
+1. Clone the mlops-r-gha repository on shinyserver into the root `azureuser` directory.
 ```bash
 git clone https://github.com/revodavid/mlops-r-gha
 ```
