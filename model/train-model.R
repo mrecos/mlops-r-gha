@@ -52,6 +52,7 @@ download_from_datastore(ds, target_path=".", prefix="accidentdata")
 exp <- experiment(ws, "accident")
 
 cat("Submitting training run\n")
+cat(ds$path(target_path),"\n")
 
 est <- estimator(source_directory=".",
                  entry_script = "accident-glm.R",
