@@ -35,13 +35,15 @@ touch .hushlogin
 
 1. Replace /etc/shiny-server/shiny-server.conf with the file in this repository. This configures Shiny to deliver a single application from the "mlops-r-gha/accident-app" folder, and we can update files here via the configured SSH.
 
-1. Clone the mlops-r-gha repository on shinyserver into the root `azureuser` directory.
+1. Clone the mlops-r-gha repository on shinyserver into the root `azureuser` directory. May have to set permission to pull repo with `sudo chown -R azureuser .git/` (see this [SO thread](https://stackoverflow.com/questions/13195814/trying-to-git-pull-with-error-cannot-open-git-fetch-head-permission-denied))
+    - NOTE: the repo you clone below should be your forked version; note the username in the URL
 ```bash
-git clone https://github.com/revodavid/mlops-r-gha
+sudo git clone https://github.com/mrecos/mlops-r-gha
 ```
 
 12. Launch R and install the `azuremlsdk` package from GitHub as described in the [`azuremlsdk` repository](https://github.com/Azure/azureml-sdk-for-r). Don't forget the `azuremlsdk::install_azureml()` step.
     - see this [SO post](https://stackoverflow.com/questions/32540919/library-is-not-writable/36696488#comment95292973_36696488) about changing permissions to install R pacakges in the default directory. 
+    - as of 2020/08/19 needs the development version [v0.10.0] (not CRAN version) of this package to utilize the `service_principal_authentication` function
 
 13. Trigger the "Train and Deploy Model" GitHub Action in your repository. You can do this by touching a file in the `model` folder, or by browsing the Actions tab and using the "Re-Run Jobs" feature.
 
