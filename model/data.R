@@ -3,7 +3,7 @@ library(jsonlite)
 
 ## Read data from CSV file, clean, and save to .Rd file.
 
-nassCDS <- read.csv("nassCDS.csv", 
+nassCDS <- read.csv("model/nassCDS.csv", 
                      colClasses=c("factor","numeric","factor",
                                   "factor","factor","numeric",
                                   "factor","numeric","numeric",
