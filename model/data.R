@@ -15,7 +15,7 @@ accidents$occRole <- factor(accidents$occRole)
 accidents$dvcat <- ordered(accidents$dvcat, 
                           levels=c("1-9km/h","10-24","25-39","40-54","55+"))
 
-cat(accidents)
+head(accidents)
 
 saveRDS(accidents, file="accidents.Rd")
 
