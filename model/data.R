@@ -1,7 +1,7 @@
 library(azuremlsdk)
 library(jsonlite)
 
-## Read data from CSV file, clean, and save to .Rd file
+## Read data from CSV file, clean, and save to .Rd file.
 
 nassCDS <- read.csv("nassCDS.csv", 
                      colClasses=c("factor","numeric","factor",
