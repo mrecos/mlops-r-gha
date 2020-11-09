@@ -50,6 +50,8 @@ jobs:
         privateKey: ${{ secrets.SHINYKEY }}
         command: |
           cd mlops-r-gha
+          # MDH Add for permissions issue
+          sudo chmod -R ug+w .;
           git pull
 
     # Connect to the Shiny VM to train the model

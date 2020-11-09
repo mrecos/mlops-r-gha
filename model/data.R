@@ -1,7 +1,7 @@
 library(azuremlsdk)
 library(jsonlite)
 
-## Read data from CSV file, clean, and save to .Rd file
+## Read data from CSV file, clean, and save to .Rd file..
 
 nassCDS <- read.csv("nassCDS.csv", 
                      colClasses=c("factor","numeric","factor",
@@ -14,6 +14,8 @@ accidents$frontal <- factor(accidents$frontal, labels=c("notfrontal","frontal"))
 accidents$occRole <- factor(accidents$occRole)
 accidents$dvcat <- ordered(accidents$dvcat, 
                           levels=c("1-9km/h","10-24","25-39","40-54","55+"))
+
+head(accidents)
 
 saveRDS(accidents, file="accidents.Rd")
 
