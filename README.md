@@ -4,7 +4,7 @@ This repository contains resources for the talk "MLOPS with R: An end-to-end pro
 
 In addition to the slides (see below), this repository contains the complete set of code and GitHub Actions to deploy a Shiny application for calculating the probability of a fatal road accident. See below for instructions on how to deploy this application yourself.
 
-![Screenshot of Shiny app](accident-app.png)
+![Screenshot of Shiny app](mlops_gha_plan.png)
 
 ## Talk Abstract
 
@@ -57,7 +57,7 @@ This dataset includes data from over 25,000 car crashes in the US, with variable
 
 The application runs as a Shiny app, running on an instance of the Azure Data Science VM. Azure ML service is used to train and deploy the scoring endpoint from R scripts, and GitHub Actions orchestrates the app deployment.
 
- ![Architecture](mlops_gha_plan.png)
+ ![Architecture](architecture.png)
 
 ## Instructions for deploying the "Accident" app
 
