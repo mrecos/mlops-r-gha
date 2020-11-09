@@ -57,7 +57,7 @@ This dataset includes data from over 25,000 car crashes in the US, with variable
 
 The application runs as a Shiny app, running on an instance of the Azure Data Science VM. Azure ML service is used to train and deploy the scoring endpoint from R scripts, and GitHub Actions orchestrates the app deployment.
 
- ![Architecture](architecture.png)
+ ![Architecture](mlops_gha_plan.png)
 
 ## Instructions for deploying the "Accident" app
 
