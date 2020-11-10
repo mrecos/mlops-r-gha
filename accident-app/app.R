@@ -34,7 +34,7 @@ ui <- fluidPage(
       selectInput("sex",
                   "Occupant gender:",
                   c("f","m")),
-      selectInput("occRole",
+      selectInput("occRole!!!",
                   "Occupant role:",
                   c("driver","pass")),
       sliderInput("yearVeh",
