@@ -21,7 +21,7 @@ summary(accidents)
 
 ## Create data partition for use with caret
 train.pct <- as.numeric(opt$percent_train)
-if(length(train.pct)==0 || (train.pct<0) || (train.pct>1)) train.pct <- 0.65
+if(length(train.pct)==0 || (train.pct<0) || (train.pct>1)) train.pct <- 0.85
 accident_idx <- createDataPartition(accidents$dead, p = train.pct, list = FALSE)
 accident_trn <- accidents[accident_idx, ]
 accident_tst <- accidents[-accident_idx, ]
