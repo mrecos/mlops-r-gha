@@ -30,7 +30,7 @@ ui <- fluidPage(
                   "Occupant Age:",
                   min = 16,
                   max = 95,
-                  value = 16),
+                  value = 32),
       selectInput("sex",
                   "Occupant gender:",
                   c("f","m")),
